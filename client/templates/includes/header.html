@@ -9,7 +9,14 @@
       <a class="navbar-brand" href="{{pathFor 'postsList'}}">gamiphy.me</a>
       <div class="collapse navbar-collapse pull-right" id="navigation">
         <ul class="nav navbar-nav">
-          {{#if currentUser}} <li><a href="{{pathFor 'postSubmit'}}">New</a></li> {{/if}}
+          {{#if currentUser}}
+            <li>
+              <a href="{{pathFor 'postSubmit'}}">Submit Post</a>
+            </li>
+            <li class="dropdown">
+              {{> notifications}}
+            </li>
+          {{/if}}
         </ul>
         <ul class="nav navbar-nav navbar-right">
           {{> loginButtons align="right"}}
