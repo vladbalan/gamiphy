@@ -1,2 +1,2 @@
 # gamiphy
-// TODO: create README.md 
+Prototype web app showcasing gamification techniques.
