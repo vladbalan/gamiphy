@@ -10,6 +10,7 @@ blaze-tools@1.0.3-winr.2
 boilerplate-generator@1.0.3-winr.2
 callback-hook@1.0.3-winr.2
 check@1.0.4-win.0
+coffeescript@1.0.6-winr.2
 ddp@1.0.14-winr.5
 deps@1.0.7-winr.2
 ejson@1.0.6-winr.2
@@ -42,6 +43,7 @@ minimongo@1.0.7-winr.3
 mizzao:bootstrap-3@3.3.1_1
 mobile-status-bar@1.0.3-winr.2
 mongo@1.0.12-winr.4
+multiply:iron-router-progress@1.0.1
 npm-bcrypt@0.7.8-winr.3
 observe-sequence@1.0.5-winr.2
 ordered-dict@1.0.3-winr.2
@@ -65,4 +67,3 @@ underscore@1.0.3-winr.2
 url@1.0.4-winr.2
 webapp@1.1.6-winr.6
 webapp-hashing@1.0.3-winr.2
- 
