@@ -9,14 +9,14 @@
       <a class="navbar-brand" href="{{pathFor 'postsList'}}">gamiphy.me</a>
       <div class="collapse navbar-collapse pull-right" id="navigation">
         <ul class="nav navbar-nav">
-          <li>
+          <li class="{{activeRouteClass 'postsList' 'newPosts'}}">
             <a href="{{pathFor 'newPosts'}}">New</a>
           </li>
-          <li>
+          <li class="{{activeRouteClass 'bestPosts'}}">
             <a href="{{pathFor 'bestPosts'}}">Best</a>
           </li>
           {{#if currentUser}}
-            <li>
+            <li class="{{activeRouteClass 'postSubmit'}}">
               <a href="{{pathFor 'postSubmit'}}">Submit Post</a>
             </li>
             <li class="dropdown">
