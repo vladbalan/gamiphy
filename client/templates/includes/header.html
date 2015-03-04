@@ -1,18 +1,21 @@
 <template name="header">
-  <header class="navbar navbar-default" role="navigation">
-    <div class="navbar-header col-md-12">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-      <a class="navbar-brand" href="{{pathFor 'home'}}">gamiphy.me</a>
-      <div class="collapse navbar-collapse pull-right" id="navigation">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{pathFor 'home'}}">Microscope</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav">
           <li class="{{activeRouteClass 'home' 'newPosts'}}">
             <a href="{{pathFor 'newPosts'}}">New</a>
           </li>
-          <li class="{{activeRouteClass 'bestPosts'}}">
+          <li class="{{activeRouteClass  'bestPosts'}}">
             <a href="{{pathFor 'bestPosts'}}">Best</a>
           </li>
           {{#if currentUser}}
@@ -25,9 +28,9 @@
           {{/if}}
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          {{> loginButtons align="right"}}
+          {{> loginButtons}}
         </ul>
       </div>
     </div>
-  </header>
+  </nav>
 </template>
