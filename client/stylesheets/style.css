@@ -1,9 +1,5 @@
 .grid-block, .main, .post, .comments li, .comment-form {
   background: #fff;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
   padding: 10px;
   margin-bottom: 10px;
@@ -15,14 +11,19 @@ body {
   background: #eee;
   color: #666666; }
 
+#main {
+  position: relative;
+}
+.page {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
 .navbar {
   margin-bottom: 10px; }
   /* line 32, ../sass/style.scss */
   .navbar .navbar-inner {
-    -webkit-border-radius: 0px 0px 3px 3px;
-    -moz-border-radius: 0px 0px 3px 3px;
-    -ms-border-radius: 0px 0px 3px 3px;
-    -o-border-radius: 0px 0px 3px 3px;
     border-radius: 0px 0px 3px 3px; }
 
 #spinner {
@@ -48,7 +49,6 @@ body {
     transition: none; }
   .post.animate{
     -webkit-transition: all 300ms 0ms;
-    -webkit-transition-delay: ease-in;
     -moz-transition: all 300ms 0ms ease-in;
     -o-transition: all 300ms 0ms ease-in;
     transition: all 300ms 0ms ease-in; }
@@ -101,10 +101,6 @@ body {
 
 .load-more {
   display: block;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
   background: rgba(0, 0, 0, 0.05);
   text-align: center;
