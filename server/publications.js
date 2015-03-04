@@ -1,12 +1,18 @@
-Meteor.publish('posts', function(limit) {
-  return Posts.find({}, {limit: limit});
+Meteor.publish('posts', function(options) {
+  check(options, {
+    sort: Object,
+    limit: Number
+  });
+  return Posts.find({}, options);
 });
 
 Meteor.publish('singlePost', function(id) {
-  return id && Posts.find(id);
+  check(id, String);
+  return Posts.find(id);
 });
 
 Meteor.publish('comments', function(postId) {
+  check(postId, String);
   return Comments.find({postId: postId});
 });
 
