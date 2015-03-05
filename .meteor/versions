@@ -45,6 +45,8 @@ minimongo@1.0.7-winr.3
 mobile-status-bar@1.0.3-winr.2
 mongo@1.0.12-winr.4
 multiply:iron-router-progress@1.0.1
+nemo64:bootstrap@3.3.1_1
+nemo64:bootstrap-data@3.3.1_1
 npm-bcrypt@0.7.8-winr.3
 observe-sequence@1.0.5-winr.2
 ordered-dict@1.0.3-winr.2
@@ -64,7 +66,6 @@ srp@1.0.3-winr.2
 stylus@1.0.7-winr.3
 templating@1.0.11-winr.6
 tracker@1.0.5-winr.4
-twbs:bootstrap@3.3.2
 ui@1.0.6-winr.2
 underscore@1.0.3-winr.2
 url@1.0.4-winr.2
