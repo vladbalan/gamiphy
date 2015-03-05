@@ -1,69 +1,26 @@
 // Fixture data 
 if (Posts.find().count() === 0) {
   var now = new Date().getTime();
+  var words = [
+    ["Big", "Simple", "Awesome", "Cool", "Easy", "Cute", "Angry", "Vicious", "Serious"],
+    ["blue", "green", "red", "kind", "bad", "lovable", "independent", "black"],
+    ["car", 'bike', 'ship', 'cruiser', 'frigate', 'plane', 'cart', 'scooter']
+  ]
 
-  // create two users
-  var tomId = Meteor.users.insert({
-    profile: { name: 'Tom Coleman' }
+  var jonId = Meteor.users.insert({
+    profile: { name: 'Jon Doe' }
   });
-  var tom = Meteor.users.findOne(tomId);
-  var sachaId = Meteor.users.insert({
-    profile: { name: 'Sacha Greif' }
-  });
-  var sacha = Meteor.users.findOne(sachaId);
+  var jon = Meteor.users.findOne(jonId);
 
-  var telescopeId = Posts.insert({
-    title: 'Introducing Telescope',
-    userId: sacha._id,
-    author: sacha.profile.name,
-    url: 'http://sachagreif.com/introducing-telescope/',
-    submitted: now - 7 * 3600 * 1000,
-    commentsCount: 2,
-    upvoters: [], votes: 0
-  });
-
-  Comments.insert({
-    postId: telescopeId,
-    userId: tom._id,
-    author: tom.profile.name,
-    submitted: now - 5 * 3600 * 1000,
-    body: 'Interesting project Sacha, can I get involved?'
-  });
-
-  Comments.insert({
-    postId: telescopeId,
-    userId: sacha._id,
-    author: sacha.profile.name,
-    submitted: now - 3 * 3600 * 1000,
-    body: 'You sure can Tom!'
-  });
-
-  Posts.insert({
-    title: 'Meteor',
-    userId: tom._id,
-    author: tom.profile.name,
-    url: 'http://meteor.com',
-    submitted: now - 10 * 3600 * 1000,
-    commentsCount: 0,
-    upvoters: [], votes: 0
-  });
-
-  Posts.insert({
-    title: 'The Meteor Book',
-    userId: tom._id,
-    author: tom.profile.name,
-    url: 'http://themeteorbook.com',
-    submitted: now - 12 * 3600 * 1000,
-    commentsCount: 0,
-    upvoters: [], votes: 0
-  });
-
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 50; i++) {
+    var noun = words[2][Math.floor(Math.random()*words[2].length)];
     Posts.insert({
-      title: 'Test post #' + i,
-      author: sacha.profile.name,
-      userId: sacha._id,
-      url: 'http://google.com/?q=test-' + i,
+      title:  words[0][Math.floor(Math.random()*words[0].length)] + ' ' +
+              words[1][Math.floor(Math.random()*words[1].length)] + ' ' +
+              noun,
+      author: jon.profile.name,
+      userId: jon._id,
+      url: 'http://gamiphy.meteor.com/links/' + noun + '-' + i,
       submitted: now - i * 3600 * 1000,
       commentsCount: 0,
       upvoters: [], votes: 0
