@@ -25,6 +25,11 @@
             <li class="dropdown">
               {{> notifications}}
             </li>
+            {{#if isInRole 'admin'}}
+              <li class="{{activeRouteClass 'admin'}}">
+                <a href="{{pathFor 'admin'}}">Secret Area</a>
+              </li>
+            {{/if}}
           {{/if}}
         </ul>
         <ul class="nav navbar-nav navbar-right">
