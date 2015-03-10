@@ -1,0 +1,22 @@
+<template name="sidebar">
+    <div id="sidebar">
+        <ul class="nav navbar-nav">
+          <li class="{{activeRouteClass 'home' 'newBlurts'}}">
+            <a href="{{pathFor 'newBlurts'}}"><span class="glyphicon glyphicon-home"></span></a>
+          </li>
+          <li class="{{activeRouteClass 'bestBlurts'}}">
+            <a href="{{pathFor 'bestBlurts'}}"><span class="glyphicon glyphicon-bullhorn"></span></a>
+          </li>
+          <li class="{{activeRouteClass 'home'}}">
+            <a href="{{pathFor 'home'}}"><span class="glyphicon glyphicon-link"></span></a>
+          </li>
+          <li class="{{activeRouteClass 'home'}}">
+            <a href="{{pathFor 'home'}}"><span class="glyphicon glyphicon-flash"></span></a>
+          </li>
+          <li class="{{activeRouteClass 'home'}}">
+            <a href="{{pathFor 'home'}}"><span class="glyphicon glyphicon-globe"></span></a>
+          </li>
+          
+        </ul>
+    </div>
+</template>
