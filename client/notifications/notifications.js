@@ -8,8 +8,8 @@ Template.notifications.helpers({
 });
 
 Template.notification.helpers({
-  notificationPostPath: function() {
-    return Router.routes.postPage.path({_id: this.postId});
+  notificationBlurtPath: function() {
+    return Router.routes.blurtPage.path({_id: this.blurtId});
   }
 });
 

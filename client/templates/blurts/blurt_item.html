@@ -1,0 +1,14 @@
+<template name="blurtItem">
+  <div class="blurt">
+    <a href="#" class="upvote btn {{upvotedClass}}"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
+    <div class="blurt-content">
+      <h3><a href="{{pathFor 'blurtPage'}}">"{{text}}"</a><span><em> ~ {{author}}</em></span></h3>
+      <p>
+        {{pluralize votes "Vote"}}, 
+        <a href="{{pathFor 'blurtPage'}}">{{pluralize commentsCount "comment"}}</a>
+        {{#if ownBlurt}}<a href="{{pathFor 'blurtEdit'}}">Edit</a>{{/if}}
+      </p>
+    </div>
+    <a href="{{pathFor 'blurtPage'}}" class="discuss btn">Discuss</a>
+  </div>
+</template>

@@ -7,7 +7,7 @@ function randArray(array) {
   return array[rand(array.length)];
 }
 
-if (Posts.find().count() === 0) {
+if (Blurts.find().count() === 0) {
   var now = new Date().getTime();
   var words = [
     ["Big stupid", "This is my favorite", "Paragon", "Renegade", "Me and my", "In the middle of some", "The legend of", "Ask me about my", "About the", "Looking for my", "The definition of", "In love with the", "Damn it feels good to be a"],
@@ -43,12 +43,11 @@ if (Posts.find().count() === 0) {
       for (var i = 0; i < 50; i++) {
         var noun = randArray(words[1]);
         var commentsCount = rand(10);
-        var postId = Posts.insert({
-          title:  randArray(words[0]) + ' ' +
+        var blurtId = Blurts.insert({
+          text:  randArray(words[0]) + ' ' +
                   noun + randArray(words[2]),
           author: shep.profile.name,
           userId: shep._id,
-          url: 'http://gamiphy.meteor.com/links/' + noun + '-' + i,
           submitted: now - i * 3600 * 1000,
           commentsCount: commentsCount,
           upvoters: [], votes: 0
@@ -66,7 +65,7 @@ if (Posts.find().count() === 0) {
           Comments.insert({
             userId: shep._id,
             author: shep.profile.name,
-            postId: postId,
+            blurtId: blurtId,
             submitted: now - dateFactor * 3600 * 1000,
             body: currentBody
           })

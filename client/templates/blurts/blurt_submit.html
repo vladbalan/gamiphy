@@ -1,0 +1,12 @@
+<template name="blurtSubmit">
+  <form class="main form page">
+    <div class="form-group {{errorClass 'text'}}">
+      <label class="control-label" for="text">Text</label>
+      <div class="controls">
+          <input name="text" id="text" type="text" value="" placeholder="Name your blurt" class="form-control"/>
+          <span class="help-block">{{errorMessage 'text'}}</span>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary"/>
+  </form>
+</template>

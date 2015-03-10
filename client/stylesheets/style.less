@@ -1,6 +1,6 @@
 @import "custom.bootstrap.import.less";
 
-.grid-block, .main, .post, .comments li, .comment-form {
+.grid-block, .main, .blurt, .comments li, .comment-form {
   background: lighten(@body-bg, 2%);
   border-radius: 3px;
   padding: 10px;
@@ -28,50 +28,50 @@
 #spinner {
   height: 300px; }
 
-.post {
+.blurt {
   /* For modern browsers */
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
   position: relative;
   opacity: 1; }
-  .post:before, .post:after {
+  .blurt:before, .blurt:after {
     content: "";
     display: table; }
-  .post:after {
+  .blurt:after {
     clear: both; }
-  .post.invisible {
+  .blurt.invisible {
     opacity: 0; }
-  .post.instant {
+  .blurt.instant {
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
     transition: none; }
-  .post.animate{
+  .blurt.animate{
     -webkit-transition: all 300ms 0ms;
     -moz-transition: all 300ms 0ms ease-in;
     -o-transition: all 300ms 0ms ease-in;
     transition: all 300ms 0ms ease-in; }
-  .post .upvote {
+  .blurt .upvote {
     display: block;
     margin: 7px 12px 0 0;
     float: left; }
-  .post .post-content {
+  .blurt .blurt-content {
     float: left; }
-    .post .post-content h3 {
+    .blurt .blurt-content h3 {
       margin: 0;
       line-height: 1.4;
       font-size: 18px; }
-      .post .post-content h3 a {
+      .blurt .blurt-content h3 a {
         display: inline-block;
         margin-right: 5px; }
-      .post .post-content h3 span {
+      .blurt .blurt-content h3 span {
         font-weight: normal;
         font-size: 14px;
         display: inline-block;
         color: @gray-darker; }
-    .post .post-content p {
+    .blurt .blurt-content p {
       margin: 0; }
-  .post .discuss {
+  .blurt .discuss {
     display: block;
     float: right;
     margin-top: 7px; }
@@ -111,7 +111,7 @@
     text-decoration: none;
     background: rgba(0, 0, 0, 0.1); }
 
-.posts .spinner-container{
+.blurts .spinner-container{
   position: relative;
   height: 100px;
 }

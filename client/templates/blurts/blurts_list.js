@@ -1,4 +1,4 @@
-Template.postsList.rendered = function () {
+Template.blurtsList.rendered = function () {
   this.find('.wrapper')._uihooks = {
     moveElement: function (node, next) {
       var $node = $(node), $next = $(next);

@@ -5,7 +5,7 @@ Accounts.ui.config({
 /**
 // msavin:mongol config
 Session.set("Mongol", {
-	'collections': ['Posts'],
+	'collections': ['Blurts'],
 	'display': true,
 	'opacity_normal': ".1",
 	'opacity_expand': ".9",

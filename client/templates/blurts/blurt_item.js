@@ -1,11 +1,6 @@
-Template.postItem.helpers({
-  ownPost: function() {
+Template.blurtItem.helpers({
+  ownBlurt: function() {
     return Meteor.userId() && this.userId == Meteor.userId();
-  },
-  domain: function() {
-    var a = document.createElement('a');
-    a.href = this.url;
-    return a.hostname;
   },
   upvotedClass: function() {
   	var userId = Meteor.userId();
@@ -17,7 +12,7 @@ Template.postItem.helpers({
   }
 });
 
-Template.postItem.events({
+Template.blurtItem.events({
   'click .upvotable': function(e) {
     e.preventDefault();
     Meteor.call('upvote', this._id);

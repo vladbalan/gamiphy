@@ -18,12 +18,12 @@ Template.commentSubmit.events({
     var $body = $(e.target).find('[name=body]');
     var comment = {
       body: $body.val(),
-      postId: template.data._id
+      blurtId: template.data._id
     };
     
     var errors = {};
     if (! comment.body) {
-      errors.body = "Please write some content";
+      errors.body = "Please write some comment";
       return Session.set('commentSubmitErrors', errors);
     }
     
