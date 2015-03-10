@@ -212,7 +212,7 @@ body {
   height: 100%;
   padding: 50px 0 0px 0;
   position: fixed;
-  border-left: 1px solid @gray;
+  border-left: 1px solid @gray-darker;
   right: 0;
 }
 
@@ -266,4 +266,15 @@ body {
     border-left:0;
   }
 } 
+
+
+.mCS-minimal.mCSB_scrollTools {
+  .mCSB_draggerRail { background-color: lighten(@gray-base, 1%); } 
+  .mCSB_dragger {
+    .mCSB_dragger_bar { background-color: @gray-darker; }
+  }
+  .mCSB_dragger_onDrag {
+    .mCSB_dragger_bar { background-color: @gray-dark !important; }
+  }
+}
 

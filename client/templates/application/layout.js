@@ -1,4 +1,8 @@
 Template.layout.rendered = function() {
+  $("#main").mCustomScrollbar({
+    theme:"minimal"
+  });
+ 
   this.find('#main')._uihooks = {
     insertElement: function(node, next) {
       $(node)
